@@ -2,7 +2,8 @@ import React from 'react';
 import styles from '../styles/App.module.scss';
 
 const App = () => {
-  const test_message = "HELLOOOOOOOOOO";
+  // COMMENT
+  const test_message = 'HELLOOOOOOOOOO';
 
   return (
     <div className={styles.app}>
