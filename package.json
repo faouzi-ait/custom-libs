@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint src",
+    "lint": "eslint --fix src",
     "lint-staged": "lint-staged",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -62,5 +62,7 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-eslint": "^10.1.0"
+  }
 }
