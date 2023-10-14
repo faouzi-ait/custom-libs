@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/App.module.scss';
 
 const App = () => {
-  // COMMENT
   const test_message = 'HELLOOOOOOOOOO';
 
   return (

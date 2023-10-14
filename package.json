@@ -14,10 +14,7 @@
     "docs": "jsdoc -r src -d docs"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run lint",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"]
   },
   "husky": {
     "hooks": {
