@@ -1,15 +1,8 @@
 import React from 'react';
-import styles from './styles/App.module.scss';
+import Home from './components/Home';
 
 const App = () => {
-  // test comment
-  const test_message = 'HELLO';
-
-  return (
-    <div className={styles.app}>
-      <h1>{test_message}, React App!</h1>
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
