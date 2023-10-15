@@ -5,5 +5,4 @@
  * @param {number} b - The second number.
  * @returns {number} The sum of the input numbers.
  */
-const sum = (a, b) => a + b
-
+export const sum = (a, b) => a + b;
