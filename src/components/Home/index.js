@@ -1,14 +1,22 @@
 import React from 'react';
+import Header from '../Header';
 import styles from '../../styles/App.module.scss';
 
-const App = () => {
-  const test_message = 'HELLO';
-
+/**
+ * Home component.
+ * This component serves as the entry point of the application.
+ *
+ * @component
+ * @example
+ * import Home from './Home';
+ * <Home />
+ */
+const Home = () => {
   return (
     <div className={styles.app}>
-      <h1>{test_message}, React App!</h1>
+      <Header message="HELLO.......This is a custom built react project" />
     </div>
   );
 };
 
-export default App;
+export default Home;

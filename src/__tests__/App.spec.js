@@ -9,7 +9,9 @@ import '@testing-library/jest-dom';
 test('renders App component', () => {
   const { getByText } = render(<App />);
 
-  const headingElement = getByText(/HELLO, React App!/i);
+  const headingElement = getByText(
+    /HELLO.......This is a custom built react project/i,
+  );
   expect(headingElement).toBeInTheDocument();
 
   const testMessageElement = getByText(/HELLO/i);
