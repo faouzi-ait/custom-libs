@@ -3,7 +3,6 @@ import Header from '../components/Header';
 
 import { expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
-// import '@testing-library/jest-dom/extend-expect'; // for extending jest expect functionalities
 
 import '@testing-library/jest-dom';
 

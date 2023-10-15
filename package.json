@@ -51,7 +51,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-environment-jsdom-global": "^2.3.0",
-    "jsdoc": "^3.6.7",
+    "jsdoc": "^3.6.11",
     "lint-staged": "^11.2.6",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^7.0.3",

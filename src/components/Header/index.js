@@ -6,14 +6,14 @@ import React from 'react';
  *
  * @component
  * @param {string} props.message - The message to be displayed.
- * 
+ *
  * @example
  * import App from './App';
- * 
+ *
  * <Header message="My App" />
  */
 const Header = ({ message }) => {
   return <h1>{message}</h1>;
-}
+};
 
 export default Header;
