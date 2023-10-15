@@ -1,0 +1,8 @@
+node_modules/
+.babelrc
+.eslintrc
+.prettierrc
+package-lock.json
+package.json
+public/index.html
+README.md

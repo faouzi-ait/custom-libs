@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "plugins": ["react"],
+  "plugins": ["react", "import", "prettier"],
   "env": {
     "browser": true,
     "es6": true
@@ -12,10 +12,12 @@
     }
   },
   "rules": {
+    "prettier/prettier": "error",
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
+    "import/no-unresolved": "error",
     "react/prop-types": "off" // Disable prop-types check for functional components
     // Add more rules as needed
   }
