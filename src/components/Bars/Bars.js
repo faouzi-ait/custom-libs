@@ -1,8 +1,6 @@
 import React from 'react';
 
-// import styles from '../../styles/App.module.scss';
-
-const Bars = ({ width, children }) => {
+const Bars = ({ width = '100%', fontSize = '13px', children }) => {
   const opposite = (number) => -number;
   const num = width < 0 ? opposite(width) : width;
 
@@ -18,7 +16,7 @@ const Bars = ({ width, children }) => {
 
   return (
     <section style={{ ...styleStr }}>
-      <span style={{ fontSize: '15px' }}>{children}</span>
+      <span style={{ fontSize }}>{children}</span>
     </section>
   );
 };

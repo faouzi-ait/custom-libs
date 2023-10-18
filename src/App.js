@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { StarRatings, Modal, Table, AdvancedTable, Bars } from './components/';
+import SideBar from './components/SideBar';
 
 import styles from './styles/App.module.scss';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [rating, setRating] = useState(0);
 
   const openModal = () => {
@@ -13,6 +15,10 @@ const App = () => {
 
   const closeModal = () => {
     setIsOpen(false);
+  };
+
+  const toggleSidebar = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const renderHeader = (columnName) => {
@@ -68,6 +74,14 @@ const App = () => {
 
       <br />
 
+      {/* BARS CHART EXAMPLE */}
+      <section style={{ width: '65%' }}>
+        <Bars width={14}>{14}% Engine</Bars>
+        <Bars width={-22}>{-22}% Finance</Bars>
+      </section>
+
+      <br />
+
       {/* MODAL DISPLAY EXAMPLE */}
       <button onClick={openModal}>Open Modal</button>
       <Modal
@@ -82,11 +96,24 @@ const App = () => {
       <br />
       <br />
 
-      {/* BARS CHART EXAMPLE */}
-      <section style={{ width: '65%' }}>
-        <Bars width={14}>{14}% Engine</Bars>
-        <Bars width={-22}>{-22}% Finance</Bars>
-      </section>
+      {/* SIDEBAR DISPLAY EXAMPLE */}
+      <button onClick={toggleSidebar}>
+        {isMenuOpen ? '☰ Close' : '☰ Menu'}
+      </button>
+      <SideBar
+        isOpen={isMenuOpen}
+        toggleSidebar={toggleSidebar}
+        closebtnStyle="closebtn"
+      >
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+          <li>Who we are</li>
+          <li>Let &apos;s talk</li>
+        </ul>
+      </SideBar>
     </main>
   );
 };

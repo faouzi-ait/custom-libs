@@ -38,6 +38,13 @@ module.exports = async (env, argv) => {
           ],
         },
         {
+          test: /\.css$/,
+          use: [
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            'css-loader',
+          ],
+        },
+        {
           test: /\.(png|jpg|jpeg|svg)$/,
           use: 'file-loader',
         },

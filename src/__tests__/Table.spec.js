@@ -2,7 +2,8 @@ import React from 'react';
 import { Table } from '../components';
 
 import { render, screen } from '@testing-library/react';
-import { toHaveClass } from '@testing-library/jest-dom/matchers';
+import { toHaveClass, toHaveStyle } from '@testing-library/jest-dom/matchers';
+
 import '@testing-library/jest-dom';
 
 expect.extend({ toHaveClass });
@@ -12,8 +13,6 @@ describe('Table Component', () => {
     { id: 1, name: 'Alice', age: 25 },
     { id: 2, name: 'Bob', age: 30 },
   ];
-
-  const empty = [];
 
   test('renders table headers and data', () => {
     render(<Table data={data} />);
