@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const portfinder = require('portfinder');
 
-module.exports = (env, argv) => {
+module.exports = async (env, argv) => {
   const isProduction = argv.mode === 'production';
+  const port = await portfinder.getPortPromise();
 
   return {
     entry: './src/index.js',
@@ -75,7 +77,7 @@ module.exports = (env, argv) => {
       static: {
         directory: path.join(__dirname, 'public'),
       },
-      port: 3000,
+      port,
       open: true,
     },
   };

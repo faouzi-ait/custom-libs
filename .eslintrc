@@ -11,6 +11,7 @@
       "version": "detect"
     }
   },
+  "ignorePatterns": ["**/*.test.js", "**/*.spec.js"],
   "rules": {
     "prettier/prettier": "error",
     "indent": ["error", 2],

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 
 import { expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
@@ -18,6 +18,6 @@ test('renders Header component with custom class', () => {
   const message = 'Hello, World!';
   const { getByText } = render(<Header message={message} />);
 
-  const headerComponent = getByText(message).closest('h1');
+  const headerComponent = getByText(message).closest('p');
   expect(headerComponent).toBeInTheDocument();
 });

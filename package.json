@@ -14,6 +14,11 @@
     "test:single": "jest",
     "docs": "jsdoc -r src -d docs"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
+  },
   "lint-staged": {
     "*.{js,ts,json,css,md}": [
       "npm run lint",
@@ -67,6 +72,7 @@
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "clean-webpack-plugin": "^4.0.0"
+    "clean-webpack-plugin": "^4.0.0",
+    "portfinder": "^1.0.32"
   }
 }

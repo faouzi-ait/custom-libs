@@ -1,19 +1,23 @@
 import React from 'react';
-import App from '../components/Home';
+import App from '../App';
 
 import { expect, test } from '@jest/globals';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import '@testing-library/jest-dom';
 
-test('renders App component', () => {
-  const { getByText } = render(<App />);
+describe('Testing the App component', () => {
+  test('renders the App component without errors', () => {
+    render(<App />);
+  });
 
-  const headingElement = getByText(
-    /HELLO.......This is a custom built react project/i,
-  );
-  expect(headingElement).toBeInTheDocument();
+  test('renders app component content withoug errors', () => {
+    render(<App />);
 
-  const testMessageElement = getByText(/HELLO/i);
-  expect(testMessageElement);
+    const pageTitle = screen.getByText(/This is a Custom React App/i);
+    expect(pageTitle).toBeInTheDocument();
+
+    const appComponent = screen.getByTestId('app-component');
+    expect(appComponent).toHaveClass('app');
+  });
 });
