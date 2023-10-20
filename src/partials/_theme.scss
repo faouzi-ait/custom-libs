@@ -1,31 +1,27 @@
 .light {
-    --theme-token_panel-background: rgb(13, 28, 49);
-    --theme-token_panel-text: #FFF;
-    
-    --theme-page-background: #FFF;
-    --theme-page-text: rgb(13, 28, 49);
+  --theme-token_panel-background: rgb(13, 28, 49);
+  --theme-token_panel-text: #fff;
 
-    --theme-checkout-background: rgb(235, 237, 237);
-    --theme-checkout-text: rgb(49, 24, 13);
+  --theme-page-background: #fff;
+  --theme-page-text: rgb(13, 28, 49);
 
-    --theme-error-text: red;
-    --theme-error-text_contrast: #FFF;
+  --theme-checkout-background: rgb(235, 237, 237);
+  --theme-checkout-text: rgb(49, 24, 13);
 
-
+  --theme-error-text: red;
+  --theme-error-text_contrast: #fff;
 }
 
 .dark {
-    --theme-token_panel-background: #FFF;
-    --theme-token_panel-text: rgb(13, 28, 49);
-    
-    --theme-page-background: rgb(13, 28, 49);
-    --theme-page-text: #FFF;
-    
-    --theme-checkout-background: rgb(13, 28, 49);
-    --theme-checkout-text: #FFF;
-    
-    --theme-error-text: #FFF;
-    --theme-error-text_contrast: red;
+  --theme-token_panel-background: #fff;
+  --theme-token_panel-text: rgb(13, 28, 49);
 
-    
+  --theme-page-background: rgb(13, 28, 49);
+  --theme-page-text: #fff;
+
+  --theme-checkout-background: rgb(13, 28, 49);
+  --theme-checkout-text: #fff;
+
+  --theme-error-text: #fff;
+  --theme-error-text_contrast: red;
 }
