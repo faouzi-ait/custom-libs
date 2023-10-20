@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from '../../styles/App.module.scss';
+import styles from '../../styles.module.scss';
 
 /**
  * StarRating component displays a star rating interface allowing users to select a rating.

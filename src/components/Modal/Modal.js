@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from '../../styles/App.module.scss';
+import styles from '../../styles.module.scss';
 
 /**
  * Modal component for displaying content in a modal dialog.

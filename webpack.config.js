@@ -11,6 +11,7 @@ module.exports = async (env, argv) => {
   const port = await portfinder.getPortPromise();
 
   return {
+    mode: isProduction ? 'production' : 'development',
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -70,6 +71,7 @@ module.exports = async (env, argv) => {
     ],
     optimization: {
       minimizer: [
+        // Enables tree shaking
         new TerserWebpackPlugin({
           terserOptions: {
             format: {

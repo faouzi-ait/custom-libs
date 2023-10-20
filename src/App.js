@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { StarRatings, Modal, Table, AdvancedTable, Bars } from './components/';
-import SideBar from './components/SideBar';
+import {
+  StarRatings,
+  Modal,
+  Table,
+  AdvancedTable,
+  Bars,
+  SideBar,
+} from './components/';
 
-import styles from './styles/App.module.scss';
+import styles from './styles.module.scss';
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [rating, setRating] = useState(0);
 
   const openModal = () => {
@@ -104,8 +110,9 @@ const App = () => {
         isOpen={isMenuOpen}
         toggleSidebar={toggleSidebar}
         closebtnStyle="closebtn"
+        top="500px"
       >
-        <ul>
+        <ul className="sidebar-style">
           <li>Home</li>
           <li>About</li>
           <li>Services</li>
