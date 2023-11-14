@@ -61,7 +61,7 @@ const App = () => {
         <h1 data-testid="app-title">This is a Custom React App</h1>
 
         {/* PAGINATION DISPLAY EXAMPLE */}
-        <CMP.PaginationPage url={url} />
+        {/* <CMP.PaginationPage url={url} /> */}
 
         <br />
 
