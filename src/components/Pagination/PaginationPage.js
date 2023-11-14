@@ -20,7 +20,7 @@ const PaginationPage = ({ url }) => {
   const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
 
   useEffect(() => {
-    // CARRY OUT THE SET STATE HERE
+    // CARRY OUT THE SET STATE IN HERE
     getData();
   }, []);
 
