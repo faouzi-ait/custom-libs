@@ -1,0 +1,62 @@
+/* STICKYHEADER */
+.header {
+  background-color: #333;
+  box-sizing: border-box;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.header.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  /* SCROLLING SIDEBAR/CONTENT */
+  position: sticky;
+  top: 0px;
+  background: rgb(0, 200, 255);
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  z-index: 10;
+
+  /* for positioning text, links, etc */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.aside {
+  position: sticky;
+  top: 80px;
+  /* the height of the header (60px) + its bottom margin (20px) */
+  background: rgb(255, 100, 100);
+  padding: 20px;
+  margin-left: 0px;
+  width: 20%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.main {
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+.content {
+  background: rgb(200, 200, 200);
+  height: 300px;
+  padding: 20px;
+  margin-right: 20px;
+  width: auto;
+  margin-bottom: 20px;
+}

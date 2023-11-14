@@ -1,4 +1,5 @@
 module.exports = {
+  transformIgnorePatterns: ['<rootDir>/node_modules/(?!axios)'],
   testEnvironment: 'jsdom', // Use 'jsdom' for browser-like environment
   transform: {
     '^.+\\.jsx?$': 'babel-jest',

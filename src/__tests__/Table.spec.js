@@ -1,8 +1,8 @@
 import React from 'react';
-import { Table } from '../components';
+import { BasicTable } from '../components';
 
 import { render, screen } from '@testing-library/react';
-import { toHaveClass, toHaveStyle } from '@testing-library/jest-dom/matchers';
+import { toHaveClass } from '@testing-library/jest-dom/matchers';
 
 import '@testing-library/jest-dom';
 
@@ -15,7 +15,7 @@ describe('Table Component', () => {
   ];
 
   test('renders table headers and data', () => {
-    render(<Table data={data} />);
+    render(<BasicTable data={data} />);
 
     // Check if headers are rendered
     expect(screen.getByText('id')).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('Table Component', () => {
 
   test('applies custom class names', () => {
     render(
-      <Table
+      <BasicTable
         data={data}
         tableClassName="customTable"
         thClassName="customTh"
@@ -47,7 +47,7 @@ describe('Table Component', () => {
   });
 
   test('renders without crashing with empty data', () => {
-    const { queryByText } = render(<Table data={[]} />);
+    const { queryByText } = render(<BasicTable data={[]} />);
 
     const dataMsg = screen.getByTestId('no-data');
 

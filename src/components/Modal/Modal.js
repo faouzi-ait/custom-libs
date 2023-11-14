@@ -67,14 +67,14 @@ const Modal = ({ isOpen, onClose, contentStyle, btnStyle, children }) => {
       className={styles.modal}
       ref={modalRef}
     >
-      <section className={contentStyle}>
+      <article className={contentStyle}>
         <div className={btnStyle}>
           <button onClick={onClose} aria-label="Close Modal">
             Close
           </button>
         </div>
         <section>{children}</section>
-      </section>
+      </article>
     </dialog>
   );
 };
@@ -86,10 +86,10 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
-  isOpen: false,
-  onClose: () => {},
   width: '100%',
   height: '100%',
+  isOpen: false,
+  onClose: () => {},
 };
 
 export default Modal;

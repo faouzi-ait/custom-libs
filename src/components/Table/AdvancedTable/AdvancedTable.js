@@ -60,7 +60,7 @@ const AdvancedTable = ({
   renderCell,
 }) => {
   if (!data || data.length === 0) {
-    return <p>No data available</p>;
+    return <p data-testid="no-data">No data available</p>;
   }
 
   const columns = Object.keys(data[0]);

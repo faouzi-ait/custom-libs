@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Table component for rendering data in a tabular format with customizable styles.
@@ -27,7 +28,13 @@ import React from 'react';
  *  thClassName="customTh"
  *  tdClassName="customTd" />
  */
-const Table = ({ data, tableClassName, thClassName, tdClassName }) => {
+const Table = ({
+  data,
+  tableClassName,
+  thClassName,
+  tdClassName,
+  ...props
+}) => {
   if (!data || data.length === 0) {
     return <p data-testid="no-data">No data available</p>;
   }
@@ -35,7 +42,7 @@ const Table = ({ data, tableClassName, thClassName, tdClassName }) => {
   const columns = Object.keys(data[0]);
 
   return (
-    <table className={`table ${tableClassName || ''}`}>
+    <table className={`table ${tableClassName || ''}`} {...props}>
       <thead>
         <tr>
           {columns.map((col, i) => (
@@ -58,6 +65,13 @@ const Table = ({ data, tableClassName, thClassName, tdClassName }) => {
       </tbody>
     </table>
   );
+};
+
+Table.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  tableClassName: PropTypes.string,
+  thClassName: PropTypes.string,
+  tdClassName: PropTypes.string,
 };
 
 export default Table;

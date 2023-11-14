@@ -1,0 +1,74 @@
+/* Table.module.scss */
+
+/* Basic table styles */
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-bottom: 0px;
+  border: 1px solid #ccc;
+}
+
+.table th {
+  padding: 10px;
+}
+
+.table td {
+  padding: 5px;
+  text-align: center;
+  /* Center the content inside the cells */
+}
+
+.table th,
+.table td {
+  border: 0;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tbody .active {
+  background-color: #e0e0e0;
+}
+
+/* Styles for nested tables */
+.nested {
+  width: 90%;
+  margin-left: 20px;
+  border: 1px solid transparent;
+  /* Adjust the indentation level for nested tables */
+}
+
+/* Styles for nested cells */
+.nestedCell {
+  /* Reset padding for nested cells */
+  padding: 0;
+}
+
+.row {
+  border: 0;
+}
+
+.active {
+  border: 0;
+}
+
+/* Additional styles for toggle button */
+.toggleButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Hover effect for toggle button */
+.toggleButton:hover {
+  background-color: #45a049;
+}

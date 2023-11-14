@@ -1,0 +1,45 @@
+/* Basic styling for the list */
+.recursiveList {
+  width: 55%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  list-style-type: none;
+}
+
+/* Style for list items */
+.recursiveListItem {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    background-color: #e0e0e0;
+    // transform: scale(1.02);
+  }
+
+  /* Indent nested items */
+  &.recursiveListItemChild {
+    margin-left: 20px;
+  }
+}
+
+/* Text styles */
+.recursiveListItemText {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Custom styling for specific level of nesting */
+.recursiveListLevel2 {
+  background-color: #e8f5e9;
+}
+
+.recursiveListLevel3 {
+  background-color: #ffebee;
+}
