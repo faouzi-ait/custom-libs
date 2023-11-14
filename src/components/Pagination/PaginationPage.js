@@ -8,6 +8,7 @@ const PaginationPage = ({ url }) => {
   const [coinsData, setCoinsData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+  // FUNCTION TO FIX TO RETURN THE DATA AND REMOVE THE SET STATE
   const getData = async () => {
     const { data } = await axios.get(url);
     setCoinsData(data);
@@ -19,6 +20,7 @@ const PaginationPage = ({ url }) => {
   const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
 
   useEffect(() => {
+    // CARRY OUT THE SET STATE HERE
     getData();
   }, []);
 
